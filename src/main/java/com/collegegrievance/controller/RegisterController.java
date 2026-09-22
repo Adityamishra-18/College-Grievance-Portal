@@ -1,7 +1,7 @@
 package com.collegegrievance.controller;
 
 import com.collegegrievance.dao.UserService;
-import entity.User;
+import com.collegegrievance.entity.User;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -32,19 +32,14 @@ public class RegisterController extends HttpServlet {
         user.setDepartment(department);
         user.setPassword(password);
         user.setRole(role);
-
         UserService service = new UserService();
 
         int result = service.register(user);
 
         System.out.println(result);
-
         if (result > 0) {
-
-            resp.sendRedirect("login.html?registered=true");
-
+            resp.sendRedirect("login.jsp?registered=true");
         } else {
-
             resp.getWriter().println("Registration failed");
         }
     }

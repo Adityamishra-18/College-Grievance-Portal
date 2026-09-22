@@ -1,6 +1,6 @@
 package com.collegegrievance.dao;
 
-import entity.User;
+import com.collegegrievance.entity.User;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
