@@ -19,7 +19,7 @@ public class ComplaintService {
             con = DriverManager.getConnection(
                     "jdbc:mysql://127.0.0.1:3306/collegegrievanceportal",
                     "root",
-                    "Narayan@8480395391"
+                    "aditya@2005"
             );
 
         } catch (SQLException e) {
